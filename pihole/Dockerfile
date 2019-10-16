@@ -32,5 +32,6 @@ RUN curl -fsSL https://github.com/jpmck/PADD/archive/v3.0.2.tar.gz | tar xz --st
 
 # use wally3k's ticked list from https://firebog.net/
 RUN curl -sSL https://v.firebog.net/hosts/lists.php?type=tick -o /etc/pihole/adlists.list
-
+RUN echo ======= DOWNLOADING NEW ADMIN INTERFACE =======
 RUN cd /var/www/html && rm -rf admin && git clone https://github.com/liltimtim/AdminLTE.git && mv AdminLTE admin
+RUN echo ======= FINISHED INSTALLING ADMIN INTERFACE =======
